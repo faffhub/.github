@@ -69,8 +69,13 @@ plugin = "faff-plugin-my-hours"
 email = "your.email@address.here"
 ```
 
-Next, we'll pull the time-tracking data from my-hours:
+Next, we'll run `faff pull` to fetch the latest time-tracking data from my-hours. Seeing as this is our first time, it'll ask us to authenticate:
 ```
 $ faff pull
+Please enter your password to authenticate with MyHours.
+This password will not be stored.
+User: your.email@address.here
+Password:
+Pulling MyHours plan...
+Pulled plan from my-employer
 ```
-
