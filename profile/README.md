@@ -23,7 +23,8 @@ $ pipx install faff-cli
   installed package faff-cli 0.1.7, installed using Python 3.13.7
   These apps are now globally available
     - faff
-
+```
+```
 $ faff init
 Initializing faff ledger...
 ✓ Initialized faff ledger at /home/tom.linux/.faff.
@@ -46,13 +47,30 @@ Installing plugin 'faff-plugin-my-hours' from https://github.com/faffhub/faff-pl
 
 To create a remote using this plugin, run:
   faff remote add <remote-id> faff-plugin-my-hours
-
+```
+```
 $ faff remote add my-employer faff-plugin-my-hours
 Created remote 'my-employer' from plugin template
 File: /home/tom.linux/.faff/remotes/my-employer.toml
 
 Run: faff remote edit my-employer to configure
-
+```
+```
+$ faff remote edit my-employer
 ```
 
+Running `faff remote edit my-employer` will open the configuration file in your default editor. The basic configuration is _very_ basic - you just need to replace the example email address in the [conenction] section with your own. Then save the file.
+
+```
+id = "my-employer"
+plugin = "faff-plugin-my-hours"
+
+[connection]
+email = "your.email@address.here"
+```
+
+Next, we'll pull the time-tracking data from my-hours:
+```
+$ faff pull
+```
 
